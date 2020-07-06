@@ -34,7 +34,6 @@ Header-related styling
 	max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    border: 2px solid red;
 }
 
 
@@ -51,7 +50,6 @@ Header-related styling
 	font: normal 28px Cookie;
     line-height: 40px;
     margin-left: 0.5em;
-    border: 2px solid blue;
 }
 
 
@@ -84,9 +82,13 @@ Jumbotron Styling
     color: #fefefe;
 }
 
+#jumbotron p{
+    width:45%;
+}
+
 #jumbotron-salutation {
-    font-size: 1.5em;
-    margin-top: 2.5em;
+    font-size: 1.2em;
+    margin-top: 1.4em;
     margin-bottom:0;
 }
 
