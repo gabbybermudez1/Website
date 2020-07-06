@@ -1,18 +1,32 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* This is to make the body of the page not span the entire width */
+.content-wrapper{
+    width: 80vw;
+}
+
+
 #header {
-    position: absolute;
-    left: 0;
-    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
     background:#313131;
-    width: 100%;
+    width: 100vw; /* Take up the entire space */
     color: #fefefe;
-    padding: 5px;
+    padding-left: 10px;
+       
+}
+
+#logo-container{
+    height: 20%;
+    padding: 10px;
 }
 
 #linkbar{
@@ -20,4 +34,64 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 40%;
+}
+
+
+
+.navlink{
+    color: #fefefe;
+    text-decoration: none;
+}
+
+
+#jumbotron {
+    background: #313131;
+    width: 100vw;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    color: #fefefe;
+}
+
+
+
+#jumbotron-salutation {
+    font-size: 1.5em;
+    margin-top: 2.5em;
+    margin-bottom:0;
+
+}
+
+
+
+.pink-text{
+    color:#F94B71;
+}
+
+
+
+#cmd{
+    /* font-family: "Ubuntu", sans-serif; */
+    font-weight: 400;
+    margin:0;
+    font-size:4.5em;
+    color: #fefefe;
+}
+
+.resume-button{
+    background: #4772d9;
+    font-weight: 700;
+    border: #fff;
+    color: #fefefe;
+    margin-top:1.5em;
+    padding: 1.0em;
+    border-radius: 3px;
+}
+
+
+
+.resume-button:hover{
+    background: #A3B8EC;
+    transition: 0.5s;
+    
 }
