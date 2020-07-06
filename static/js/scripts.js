@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor = document.querySelector("#cmd-cursor");
     setInterval(blink, 700);
 
-
     desired_text = "Gabby Bermudez";
     text = ""; 
     counter = 0;
@@ -24,9 +23,7 @@ const blink = () => {
 }
 
 const type_effect = () => {
-    console.log("Executed type effect")
     if ( counter < desired_text.length){
-        console.log("reach!")
         text = desired_text.substr(0, counter + 1);
         command.innerHTML = text;
         counter++;
