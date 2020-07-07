@@ -1,0 +1,150 @@
+/* --- Global Related Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- End Global Related Styling */
+
+/* This is to make the body of the page not span the entire width */
+.content-wrapper{
+    width: 80vw;
+}
+
+/* --- Header-related styling --- */
+.container {
+    background: #313131;
+	width: 100vw;
+	max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-header .container {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.main-header .container h1 {
+    color: #fefefe;
+	float: left;
+	font: normal 28px Cookie;
+    line-height: 40px;
+    margin-left: 0.5em;
+}
+
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+}
+.main-nav a {
+	display: inline-block;
+    padding: .5em 1.5em;
+}
+
+.mobile-menu {
+    display:none;
+}
+
+@media (max-width: 1000px){
+    
+    .main-header .container{
+        flex-direction:column;
+    }
+
+    .main-nav li {
+        display:block;
+    }
+    .main-nav ul{
+        background: #3d3d3d;
+        position:absolute;
+        z-index: 1;
+        width: 100vw;
+        text-align: left;
+        padding:0;
+        margin-top: 0;
+    }
+
+    .main-header h1{
+        margin-bottom:0;
+    }
+
+    .mobile-menu{
+        position: absolute;
+        display:block;
+        top: 0;
+        right: 0;
+    }
+
+    .main-nav{
+        display: none;
+    }
+}
+/* --- End Header Styling  --- */
+
+header a{
+    color: #fefefe;
+}
+
+
+/* 
+Jumbotron Styling
+*/
+#jumbotron {
+    background: #313131;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    color: #fefefe;
+}
+
+#jumbotron p{
+    width:45%;
+}
+
+#jumbotron-salutation {
+    font-size: 1.2em;
+    margin-top: 1.4em;
+    margin-bottom:0;
+}
+
+.pink-text{
+    color:#F94B71;
+}
+
+#cmd{
+    /* font-family: "Ubuntu", sans-serif; */
+    font-weight: 400;
+    margin:0;
+    font-size:4.5em;
+    color: #fefefe;
+}
+
+.resume-button{
+    background: #4772d9;
+    font-weight: 700;
+    border: #fff;
+    color: #fefefe;
+    margin-top:1.5em;
+    padding: 1.0em;
+    border-radius: 3px;
+}
+
+.resume-button:hover{
+    background: #A3B8EC;
+    transition: 0.5s;
+}
