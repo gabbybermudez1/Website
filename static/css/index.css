@@ -14,6 +14,15 @@ a {
 }
 
 
+.content-wrapper{
+    width: 80vw;
+    margin: 0;
+}
+
+.pink-text{
+    color: #F94B71;
+}
+
 
 /* --- Header Related Styles --- */
 .container {
@@ -103,10 +112,60 @@ a {
     color: #fefefe;
     background: #313131;
     width: 100vw;
+    height: 300px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.content-wrapper{
-    width: 80vw;
-    margin: 0;
+
+#jumbotron-salutation{
+    margin-bottom: 0;
+}
+#jumbotron p{
+    font-size: 13px;
+}
+
+
+#cmd {
+    margin-top: 0;
+    margin-bottom:0;
+    font-size: 3em;
+}
+
+.resume-button{
+    background: #4772d9;
+    font-weight: 700;
+    font-size: 13px;
+    border: #fff;
+    color: #fefefe;
+    margin-top:0;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+.resume-button:hover{
+    background: #A3B8EC;
+    transition: 0.5s;
+}
+
+
+@media(min-width: 768px){
+    #jumbotron {
+        height: 380px;
+    }
+
+    #jumbotron p{
+        font-size: 1em;
+        width: 60%;
+    }
+
+    #jumbotron-salutation{
+        font-size: 1.3em !important ;
+    }
+
+    #cmd {
+        font-size: 4.5em;
+    }
 }
