@@ -3,12 +3,16 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
+
 
 
 /* --- Header Related Styles --- */
@@ -28,6 +32,9 @@ a {
 
 .main-nav-list{
     display:none;
+    /* start tests */
+    background: black;
+    /* end tests */
     z-index: 1;
     list-style: none;
     padding-left: 1.2em;
@@ -35,8 +42,8 @@ a {
 }
 
 .main-nav-list li{
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #header-logo{
@@ -61,23 +68,45 @@ a {
     .mobile-menu {
         display: none;
     }
-    .main-nav-list{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .main-nav{
-        width: 50%;
-        text-align:center;
 
+
+    .main-nav-list{
+        /* Start tests */
+        position: relative;
+        display:block; 
+        background: #313131;
+        float:right; /* Right Align the list items.*/
+        /* End tests */
+    }
+
+    /* main-nav is the parent container of the list
+    This is set to 70% of the entire header.
+    */
+    .main-nav{
+        width: 70%;       
     }
 
     .main-nav li {
         display:inline;
+        margin-right: 1.5em;
     }
     .main-header .container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+}
+
+/* --- Hero (Jumbotron) Related Styles  */
+
+#jumbotron {
+    color: #fefefe;
+    background: #313131;
+    width: 100vw;
+
+}
+
+.content-wrapper{
+    width: 80vw;
+    margin: 0;
 }
