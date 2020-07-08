@@ -15,7 +15,7 @@ a {
 
 
 .content-wrapper{
-    width: 80vw;
+    width: 75vw;
     margin: 0;
 }
 
@@ -150,6 +150,14 @@ a {
     transition: 0.5s;
 }
 
+.pink-blob{
+    height:20%;
+}
+
+.jumbotron-image{
+    display:none;
+}
+
 
 @media(min-width: 768px){
     #jumbotron {
@@ -158,7 +166,8 @@ a {
 
     #jumbotron p{
         font-size: 1em;
-        width: 60%;
+        width: 100%;
+        margin-right:0;
     }
 
     #jumbotron-salutation{
@@ -167,5 +176,25 @@ a {
 
     #cmd {
         font-size: 4.5em;
+    }
+
+    .jumbotron-container {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 845px){
+    .jumbotron-image {
+        display:block;
+        height:70%;
+        margin-top: 3em;
+    }
+}
+@media (min-width: 1100px){
+    .jumbotron-image {
+        height:100%;
+        margin-top: 0;
     }
 }
