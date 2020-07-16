@@ -1,0 +1,3 @@
+build:
+  script: 
+    - mkdir hello_world
