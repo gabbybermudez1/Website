@@ -1,8 +1,16 @@
 stages:
   - build
+  - test
 
 build:
   stage: build
   script: 
     - echo "Executing build stage"
-    - mkdir c:/hello_world
+    - cd
+
+
+test: 
+  stage: test
+  script:
+    - echo "Executing test stage"
+    - mkdir hello_world_gitlab
