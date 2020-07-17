@@ -1,3 +1,7 @@
+stages:
+  - build
+
 build:
+  stage: build
   script: 
     - mkdir c:/hello_world
