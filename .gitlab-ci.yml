@@ -14,7 +14,7 @@ build_site:
     - echo "--- Website Built ---"
   artifacts:
     paths: 
-      - public/
+      - public
     expire_in: 1 day
 
 deploy_s3:
@@ -29,5 +29,5 @@ deploy_s3:
     - build_site
   script:
     - echo "--- Deploying to AWS S3"
-    - aws s3 sync public/ s3://gabbybermudez.me   
+    - aws s3 sync public s3://gabbybermudez.me   
   
