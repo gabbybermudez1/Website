@@ -1,0 +1,33 @@
+stages:
+  - build
+  - deploy 
+
+build_site:
+  stage: build
+  #  run using the runner on my local machine
+  tags:
+    - cmd
+    - local
+  script:
+    - echo "--- Executing the Build Stage ---"
+    - hugo -D
+    - echo "--- Website Built ---"
+  artifacts:
+    paths: 
+      - public/
+    expire_in: 1 day
+
+deploy_s3:
+  stage: deploy
+  tags:
+    - cmd
+    - local
+  only:
+    refs:
+      - master
+  dependencies:
+    - build_site
+  script:
+    - echo "--- Deploying to AWS S3"
+    - aws s3 sync public/ s3://gabbybermudez.me   
+  
