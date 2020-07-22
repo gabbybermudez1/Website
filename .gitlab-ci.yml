@@ -15,8 +15,7 @@ build_site:
   artifacts:
     paths: 
       - public/
-    expires_in:
-      - 1 day
+    expire_in: 1 day
 
 deploy_s3:
   stage: deploy
