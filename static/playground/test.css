@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+
+}
+
+.container{
+    border: 2px solid blue;
+    width: 80%;
+}
+
+
+.wumbo{
+    background: #e4e4e4;
+    position: absolute;
+    width: 120vw;
+    margin-left: -10vw;
+    height: 60vh;
+    z-index: -1
+}

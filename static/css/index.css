@@ -183,7 +183,7 @@ a {
     }
 }
 
-@media (min-width: 845px){
+@media (min-width: 855px){
     .jumbotron-image {
         display:block;
         height:70%;
@@ -196,4 +196,3 @@ a {
         margin-top: 0;
     }
 }
-/* --- End of CSS --- */
