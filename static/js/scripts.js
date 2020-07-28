@@ -45,7 +45,7 @@ hamburger.addEventListener("click", toggle_menu_mobile);
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
 
-desired_text = "Gabby Bermudez";
+desired_text = "Gabby ";
 text = ""; 
 counter = 0;
 command = document.querySelector("#cmd-type");
