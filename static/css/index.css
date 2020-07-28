@@ -1,25 +1,42 @@
 /* --- General Styles ---  */
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
-    margin: 0px;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
+    margin: 0;
+    line-height: 1.6;
 }
+
+h1,h2,h3,h5,p{
+    margin: 0;
+}
+
+p{
+    font-size: 14px;
+}
+
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
-.content-wrapper{
-    width: 75vw;
-    margin: 0;
-}
-
 .pink-text{
     color: #F94B71;
+}
+
+.purple-text{
+    color: #4772d9 ;
+}
+
+
+@media(min-width:768px){
+    p{
+        font-size:16px;
+    }
 }
 
 /* --- Header Related Styles --- */
@@ -28,6 +45,10 @@ a {
 	width: 100vw;
     max-width: 100%;
     color: #fefefe;
+}
+
+.main-header{
+    position:absolute;
 }
 
 .main-header .container {
@@ -76,7 +97,6 @@ a {
         display: none;
     }
 
-
     .main-nav-list{
         /* Start tests */
         position: relative;
@@ -104,13 +124,74 @@ a {
     }
 }
 
-/* --- Hero (Jumbotron) Related Styles ---  */
+/* --- Jumbotron (Hero) Related Styling --- */
 
-#jumbotron {
+#jumbotron{
+    background-color: #313131;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+#jumbotron p{
+    color:#FAFAFF;
+    margin: 1.6em 0;
+}
+
+#cmd {
+    color: #FAFAFF;
+    font-size:3.5em;
+    line-height:1;
+}
+#jumbotron-salutation {
+    font-size:1.5em;
+    font-weight:500;
+}
+
+.resume-button{
+    background: #4772d9;
+    font-weight: 600;
+    font-size: 13px;
+    border: #fff;
+    color: #fefefe;
+    margin-top:1.2em;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+.jumbotron-image{
+    display:none;
+}
+
+#cmd-cursor{
+    display:none;
+}
+
+@media(min-width:420px){
+    #cmd-cursor{
+        display: inline;
+    }
+}
+
+@media(min-width:800px){
+    .jumbotron-image{
+        display:block;
+    }
+}
+
+
+
+
+/* --- Old Hero (Jumbotron) Related Styles ---  */
+/* #jumbotron {
     color: #fefefe;
     background: #313131;
     width: 100vw;
-    height: 300px;
+    height: 100vh;
 
     display: flex;
     flex-direction: row;
@@ -132,16 +213,7 @@ a {
     font-size: 2.8em;
 }
 
-.resume-button{
-    background: #4772d9;
-    font-weight: 700;
-    font-size: 13px;
-    border: #fff;
-    color: #fefefe;
-    margin-top:0;
-    padding: 1em;
-    border-radius: 3px;
-}
+
 
 .resume-button:hover{
     background: #A3B8EC;
@@ -195,4 +267,4 @@ a {
         height:100%;
         margin-top: 0;
     }
-}
+} */

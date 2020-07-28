@@ -4,7 +4,7 @@ var nav_list = document.querySelector(".main-nav-list");
 
 // Changes the toggles between showing the menu and not
 const toggle_menu_mobile = () => {
-    nav_list.style.display = (nav_list.style.display == "none" ? "block" : "none")
+    nav_list.style.visibility = (nav_list.style.visibility == "hidden" ? "block" : "hidden")
 }
 
 
@@ -41,11 +41,11 @@ const type_effect = () => {
 hamburger.addEventListener("click", toggle_menu_mobile);
 
 
-// wait for dom to load before executing the command cusror
+// wait for DOM to load before executing the command cusror
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
 
-desired_text = "Gabby ";
+desired_text = "Gabby Bermudez";
 text = ""; 
 counter = 0;
 command = document.querySelector("#cmd-type");
