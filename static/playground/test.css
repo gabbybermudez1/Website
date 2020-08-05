@@ -1,24 +1,48 @@
-body{
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
     margin: 0;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid red;
-
+    line-height: 1.6;
 }
 
-.container{
-    border: 2px solid blue;
-    width: 80%;
+h1,h2,h3,h5,p{
+    margin: 0;
+}
+
+p{
+    font-size: 14px;
 }
 
 
-.wumbo{
-    background: #e4e4e4;
-    position: absolute;
-    width: 120vw;
-    margin-left: -10vw;
-    height: 60vh;
-    z-index: -1
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pink-text{
+    color: #F94B71;
+}
+
+.purple-text{
+    color: #4772d9 ;
+}
+
+
+@media(min-width:768px){
+    p{
+        font-size:16px;
+    }
+}
+
+.jumbotron{
+    background-color:#313131;
+    width:100%;
+    height:100vh;
+    padding-left: 1em;
+    padding-right:1em;
+    border:2px solid
 }
