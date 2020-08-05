@@ -32,12 +32,32 @@ a {
     color: #4772d9 ;
 }
 
+.pad-content{
+    padding: 0 1.5rem;
+}
 
-@media(min-width:768px){
-    p{
+@media(min-width:500px){
+    p{  
         font-size:16px;
     }
+    .pad-content{
+        padding: 0 3.1em;
+    }
 }
+
+@media(min-width:768px){
+    .pad-content{
+        padding: 0 6.25em;
+    }
+}
+
+@media(min-width:1000px){
+    .pad-content{
+        padding: 0 9.375em;
+    }
+}
+
+
 
 /* --- Header Related Styles --- */
 .container {
@@ -125,7 +145,6 @@ a {
 }
 
 /* --- Jumbotron (Hero) Related Styling --- */
-
 #jumbotron{
     background-color: #313131;
     width: 100%;
@@ -133,8 +152,6 @@ a {
     display:flex;
     flex-direction: row;
     align-items:center;
-    padding-left:1rem;
-    padding-right:1rem;
 }
 
 #jumbotron p{
@@ -172,15 +189,20 @@ a {
 }
 
 
-@media(min-width:420px){#cmd-cursor{ display: inline; }
+@media(min-width:420px){
+    #cmd-cursor{ display: inline; }
 }
 
-@media(min-width:860px){
-
-    #jumbotron{
-        padding:4rem;
+@media(min-width:500px){
+    #jumbotron-salutation{
+        font-size: 2em;
     }
+    #cmd{
+        font-size:4.6em;
+    }
+}
 
+@media(min-width:900px){
     .jumbotron-container{
         display:flex;
         flex-direction:row;
@@ -191,8 +213,8 @@ a {
 
     .jumbotron-image{
         display: block;
-        max-width:400px;
-        max-height:400px;
+        max-width:300px;
+        max-height:300px;
         width: auto;
         height: auto;
         align-self:center;
@@ -201,102 +223,9 @@ a {
     }
 }
 
-/* --- Notes --- */
-/* 20px for text
-
-2em for salutation and 
-
-4.5em for the cmd text */
-
-
-
-
-
-
-
-
-
-
-
-/* --- Old Hero (Jumbotron) Related Styles ---  */
-/* #jumbotron {
-    color: #fefefe;
-    background: #313131;
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-#jumbotron-salutation{
-    margin-bottom: 0;
-}
-#jumbotron p{
-    font-size: 13px;
-}
-
-
-#cmd {
-    margin-top: 0;
-    margin-bottom:0;
-    font-size: 2.8em;
-}
-
-
-
-.resume-button:hover{
-    background: #A3B8EC;
-    transition: 0.5s;
-}
-
-.pink-blob{
-    height:20%;
-}
-
-.jumbotron-image{
-    display:none;
-}
-
-
-@media(min-width: 768px){
-    #jumbotron {
-        height: 380px;
-    }
-
-    #jumbotron p{
-        font-size: 1em;
-        width: 100%;
-        margin-right:0;
-    }
-
-    #jumbotron-salutation{
-        font-size: 1.3em !important ;
-    }
-
-    #cmd {
-        font-size: 4.5em;
-    }
-
-    .jumbotron-container {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
+@media(min-width:1200px){
+    .jumbotron-image{
+        max-width:400px;
+        max-height:400px;
     }
 }
-
-@media (min-width: 855px){
-    .jumbotron-image {
-        display:block;
-        height:70%;
-        margin-top: 3em;
-    }
-}
-@media (min-width: 1100px){
-    .jumbotron-image {
-        height:100%;
-        margin-top: 0;
-    }
-} */
