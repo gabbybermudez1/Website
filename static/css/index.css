@@ -53,7 +53,7 @@ a {
 
 @media(min-width:1000px){
     .pad-content{
-        padding: 0 9.375em;
+        padding: 0 7.8125em;
     }
 }
 
@@ -189,7 +189,7 @@ a {
 }
 
 
-@media(min-width:420px){
+@media(min-width:340px){
     #cmd-cursor{ display: inline; }
 }
 
@@ -199,6 +199,9 @@ a {
     }
     #cmd{
         font-size:4.6em;
+    }
+    .resume-button{
+        font-size:1em;
     }
 }
 
