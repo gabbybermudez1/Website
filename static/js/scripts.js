@@ -38,9 +38,6 @@ const type_effect = () => {
 
 
 
-hamburger.addEventListener("click", toggle_menu_mobile);
-
-
 // wait for DOM to load before executing the command cusror
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
@@ -52,4 +49,14 @@ command = document.querySelector("#cmd-type");
 setTimeout(type_effect, 1200);
 
 
+const toggle_header = () => {
+    var header = document.querySelector('.header');
+    if(header.className === "header"){
+        header.className += ' open';
+    }
+
+    else{
+        header.className = "header";
+    }
+}
 
