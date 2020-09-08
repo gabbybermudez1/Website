@@ -1,5 +1,4 @@
 /* --- General Styles ---  */
-
 *{
     box-sizing: border-box;
 }
@@ -93,13 +92,13 @@ a {
     color: #F94B71;
 }
 
-
 #hamburger:hover{
     color:#F94B71;
 }
 
 .open{
     background-color:#FAFAFF !important;
+    transition: all 1s;
 }
 
 .open #header-logo{
@@ -116,6 +115,8 @@ a {
 
 /* Style and function Adapted from https://cade.codes */
 .open .nav-links {
+    transition: all 4s;
+    transform:translateY(0);
     display:block;
     list-style:none;
     padding-inline-start:0;
@@ -124,7 +125,6 @@ a {
     color:#fafaff;
     text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131
 }
-
 
 
 /* --- Jumbotron (Hero) Related Styling --- */
@@ -215,87 +215,3 @@ a {
         max-height:400px;
     }
 }
-
-
-
-
-
-
-
-/* --- Old Header-Related Styles --- */
-/* .container {
-    background: #313131;
-	width: 100vw;
-    max-width: 100%;
-    color: #fefefe;
-}
-
-.main-header{
-    position:absolute;
-}
-
-.main-header .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-
-.main-nav-list{
-    display:none;
-    background: black;
-    z-index: 1;
-    list-style: none;
-    padding-left: 1.2em;
-    margin:0;
-}
-
-.main-nav-list li{
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-#header-logo{
-    font:normal 30px Cookie;
-    color: #fefefe;
-    margin: 0;
-    padding: 0.2em 0 0.2em 0.5em;
-}
-
-.mobile-menu {
-    font: normal 30px Poppins;
-    color: #fefefe;
-    position: absolute;
-    right: 0;
-    top:0;
-    padding-right: 0.5em;
-}
-
-
-@media(min-width: 768px) {
-
-    .mobile-menu {
-        display: none;
-    }
-
-    .main-nav-list{
-        position: relative;
-        display:block; 
-        background: #313131;
-        float:right; 
-    }
-
-    .main-nav{
-        width: 70%;       
-    }
-
-    .main-nav li {
-        display:inline;
-        margin-right: 1.5em;
-    }
-    .main-header .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-} */
