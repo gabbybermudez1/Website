@@ -1,23 +1,10 @@
-
- <header class="main-header">
-	<div class="container">
-        <h3 id="header-logo"><a href="{{ .Site.BaseURL}}">gabby<span style="color:#4772d9">Bermudez</span></a></h3>
-		<nav class="main-nav">
-			<ul class="main-nav-list">
-				<li>
-					<a href="#">Experience</a>
-				</li>
-				<li>
-					<a href="#">Projects</a>
-				</li>
-				<li>
-					<a href="#">About Me</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="mobile-menu">&#x2261;</div>		
-	</div>
-</header>
+<div class="header">
+    <h3 id="header-logo"><a href="{{ .Site.BaseURL}}">gabby<span style="color:#4772d9">Bermudez</span></a></h3>
+</div>
+<ul class= "nav-links">
+    <li class=""> &#187 Experience </li>
+    <li class="">&#187  Projects </li>
+    <li class="">&#187 About Me </li>
+    <li class="">&#187 Contact  </li>
+</ul>
+<div id="hamburger" onclick="toggle_header()">&#x2261; </div>

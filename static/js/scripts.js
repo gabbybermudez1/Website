@@ -1,6 +1,3 @@
-var hamburger = document.querySelector(".mobile-menu");
-var nav_list = document.querySelector(".main-nav-list");
-
 
 // Changes the toggles between showing the menu and not
 const toggle_menu_mobile = () => {
@@ -38,9 +35,6 @@ const type_effect = () => {
 
 
 
-hamburger.addEventListener("click", toggle_menu_mobile);
-
-
 // wait for DOM to load before executing the command cusror
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
@@ -52,4 +46,21 @@ command = document.querySelector("#cmd-type");
 setTimeout(type_effect, 1200);
 
 
+const toggle_header = () => {
+    var header = document.querySelector('.header');
+    var nav = document.querySelector(".nav-links");
+    var hamburger = document.querySelector("#hamburger");
+    if(header.className === "header"){
+        header.className += ' open';
+        nav.className += ' open';
+        hamburger.className += " open";
+    
+    }
+
+    else{
+        header.className = "header";
+        nav.className="nav-links";
+        hamburger.className= "";
+    }
+}
 
