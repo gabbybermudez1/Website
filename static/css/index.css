@@ -57,75 +57,69 @@ a {
 }
 
 
-
 /* --- Header Related Styles --- */
  .header{
     position:absolute;
     padding: 0.5rem 1rem;
     background-color: #313131;
     width:100vw;
+    z-index:2;
+    transition: background-color 0.5s ease-in-out;
 }
 
+.header.open{
+    background-color:#FAFAFF;
+}
 
 #header-logo{
     font:normal 30px Cookie;
     color:#FAFAFF;
 }
 
+.open #header-logo{
+    color:#313131;
+}
+
 #hamburger{
     position: absolute;
     font-size: 44px;
     top: -0.5rem;
-    right: 0.8rem;
+    right: 1.5rem;
     color:#FAFAFF;
+    z-index:2;
 }
 
-.header .nav-links{
-    display:none;
+#hamburger.open{
+    color:#313131;
 }
 
-.nav-links li{ 
-    padding: 0.5rem 0;
+/* Styles adapted from https://cade.codes */
+.nav-links{
+    position:fixed;
+    background-color:#FAFAFF;
+    Width: 100vw;
+    z-index:1;
+    list-style:none;
+    padding-inline-start:0;
+    font-size:44px;
+    font-weight:700;
+    color:#fafaff;
+    text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
+    padding: 5rem 1rem;
+    margin:0;
+    transform: translateY(-100vh);
+    transition: transform 1s ease-in-out;
 }
 
 .nav-links li:hover{ 
     color: #F94B71;
 }
 
-#hamburger:hover{
-    color:#F94B71;
-}
 
-.open{
-    background-color:#FAFAFF !important;
-    transition: all 1s;
-}
-
-.open #header-logo{
-    color: #313131;
-}
-
-.open #hamburger{
-    color:#313131;
-}
-
-.open #hamburger:hover{
-    color:#4772d9;
-}
-
-/* Style and function Adapted from https://cade.codes */
-.open .nav-links {
-    transition: all 4s;
+.nav-links.open{
+    visibility:visible;
     transform:translateY(0);
-    display:block;
-    list-style:none;
-    padding-inline-start:0;
-    font-size:44px;
-    font-weight:700;
-    color:#fafaff;
-    text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131
 }
-
 
 /* --- Jumbotron (Hero) Related Styling --- */
 #jumbotron{
@@ -140,6 +134,10 @@ a {
 #jumbotron p{
     color:#FAFAFF;
     margin: 1.6em 0;
+}
+
+#jumbotron .jumbotron-container{
+    z-index:0;
 }
 
 #cmd {
