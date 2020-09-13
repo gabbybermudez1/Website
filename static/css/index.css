@@ -64,20 +64,18 @@ a {
     background-color: #313131;
     width:100vw;
     z-index:2;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.3s linear 0.3s;    
 }
 
 .header.open{
     background-color:#FAFAFF;
+    transition: background-color 0.3s linear;
 }
 
 #header-logo{
     font:normal 30px Cookie;
     color:#FAFAFF;
-}
-
-.open #header-logo{
-    color:#313131;
+    transition: color 0.2s linear 0.3s;
 }
 
 #hamburger{
@@ -87,11 +85,15 @@ a {
     right: 1.5rem;
     color:#FAFAFF;
     z-index:2;
+    transition: color 0.2s linear 0.3s;
 }
 
-#hamburger.open{
+.open #header-logo, #hamburger.open{
     color:#313131;
+    transition: color 0s linear;
 }
+
+
 
 /* Styles adapted from https://cade.codes */
 .nav-links{
@@ -105,10 +107,14 @@ a {
     font-weight:700;
     color:#fafaff;
     text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     margin:0;
     transform: translateY(-100vh);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.4s ease 0.2s;
+}
+
+.nav-links li{
+    margin: 0.5em 0em;
 }
 
 .nav-links li:hover{ 
