@@ -91,6 +91,20 @@ section{
     margin-top: -0.5em;
 }
 
+@media(min-width:500px){
+    .section-title{
+        font-size:3em;
+    }
+
+    .section-subtitle{
+        font-size: 14px;
+    }
+
+    .section-title-divider{
+        width:110px;
+    }
+}
+
 /* ================================================== */
 /* Header-Related Styling   */
 /* ================================================== */
@@ -118,7 +132,7 @@ section{
     position: absolute;
     font-size: 44px;
     top: -0.5rem;
-    right: 1.5rem;
+    right: 0.7rem;
     color:#FAFAFF;
     z-index:2;
     transition: color 0.2s linear 0.3s;
@@ -242,6 +256,10 @@ section{
 }
 
 @media(min-width:500px){
+    #hamburger{
+        right:1.5rem;
+    }
+
     #jumbotron-salutation{
         font-size: 2em;
     }
@@ -251,6 +269,7 @@ section{
     .resume-button{
         font-size:1em;
     }
+
 }
 
 @media(min-width:900px){
