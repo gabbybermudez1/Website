@@ -214,7 +214,7 @@ section{
     border: #fff;
     color: #fefefe;
     margin-top:1.2em;
-    padding: 1em;
+    padding: 1em 1.8em;
     border-radius: 3px;
     transition: color 0.5s linear 0.1s;
 }
@@ -267,10 +267,10 @@ section{
         font-size: 2em;
     }
     #cmd{
-        font-size:4.6em;
+        font-size:5em;
     }
     .resume-button{
-        font-size:1em;
+        font-size:18px;
     }
 
 }
