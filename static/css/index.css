@@ -18,7 +18,7 @@ h1,h2,h3,h5,p{
 }
 
 p{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
@@ -47,7 +47,7 @@ section{
 
 @media(min-width:500px){
     p{  
-        font-size:16px;
+        font-size:18px;
     }
     .pad-content{
         padding: 0 3.1em;
@@ -120,6 +120,7 @@ section{
 .header.open{
     background-color:#FAFAFF;
     transition: background-color 0.3s linear;
+    position:fixed;
 }
 
 #header-logo{
@@ -187,8 +188,9 @@ section{
 }
 
 #jumbotron p{
-    color:#FAFAFF;
+    color:#D1D1D1;
     margin: 1.6em 0;
+    width: 90%;
 }
 
 #jumbotron .jumbotron-container{
@@ -251,6 +253,7 @@ section{
 }
 
 
+/* display the command line blinking cursor */
 @media(min-width:340px){
     #cmd-cursor{ display: inline; }
 }
