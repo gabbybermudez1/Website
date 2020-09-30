@@ -31,6 +31,7 @@ section{
     margin-top: 3em;
 }
 
+
 .pink-text{
     color: #F94B71;
 }
@@ -39,7 +40,18 @@ section{
     color: #4772d9 ;
 }
 
-
+#overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+}
 /* General Section Related Styling */
 .pad-content{
     padding: 0 1.5rem;
@@ -74,6 +86,7 @@ section{
 .section-subtitle-wrapper{
     display:flex;
     justify-content: flex-start;
+    margin-bottom: 2.2em;
 }
 
 
@@ -113,7 +126,7 @@ section{
     padding: 0.5rem 1rem;
     background-color: #313131;
     width:100vw;
-    z-index:2;
+    z-index:3;
     transition: background-color 0.3s linear 0.3s;    
 }
 
@@ -135,7 +148,7 @@ section{
     top: -0.5rem;
     right: 0.7rem;
     color:#FAFAFF;
-    z-index:2;
+    z-index:3;
     transition: color 0.2s linear 0.3s;
 }
 
@@ -149,7 +162,7 @@ section{
     position:fixed;
     background-color:#FAFAFF;
     Width: 100vw;
-    z-index:1;
+    z-index:2;
     list-style:none;
     padding-inline-start:0;
     font-size:44px;
@@ -304,5 +317,10 @@ section{
 }
 
 /* ================================================== */
-/* Experience Section                                   */
+/* Experience Section                                 */
 /* ================================================== */
+.timeline-title-elements{
+    display:inline-block;
+    font-size:25px;
+    padding: 0 0.2em;
+}
