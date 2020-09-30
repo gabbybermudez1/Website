@@ -1,6 +1,10 @@
-/* --- General Styles ---  */
+/* ================================================== */
+/* General Styling  */
+/* ================================================== */
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding:0;
 }
 
 body {
@@ -23,6 +27,11 @@ a {
     color: inherit;
 }
 
+section{
+    margin-top: 3em;
+}
+
+
 .pink-text{
     color: #F94B71;
 }
@@ -31,13 +40,26 @@ a {
     color: #4772d9 ;
 }
 
+#overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+}
+/* General Section Related Styling */
 .pad-content{
     padding: 0 1.5rem;
 }
 
 @media(min-width:500px){
     p{  
-        font-size:16px;
+        font-size:18px;
     }
     .pad-content{
         padding: 0 3.1em;
@@ -56,41 +78,83 @@ a {
     }
 }
 
+.section-title{
+    font-size: 2.4em;
+    margin-bottom: 0.2em;
+}
 
-/* --- Header Related Styles --- */
+.section-subtitle-wrapper{
+    display:flex;
+    justify-content: flex-start;
+    margin-bottom: 2.2em;
+}
+
+
+.section-title-divider{
+    height:4px;
+    width: 90px;
+    background: #F94B71;
+}
+
+.section-subtitle{
+    font-size: 12px;
+    color: #8D8A8A;
+    margin-left: 0.5em;
+    font-weight:500;
+    margin-top: -0.5em;
+}
+
+@media(min-width:500px){
+    .section-title{
+        font-size:3em;
+    }
+
+    .section-subtitle{
+        font-size: 14px;
+    }
+
+    .section-title-divider{
+        width:110px;
+    }
+}
+
+/* ================================================== */
+/* Header-Related Styling   */
+/* ================================================== */
  .header{
     position:absolute;
     padding: 0.5rem 1rem;
     background-color: #313131;
     width:100vw;
-    z-index:2;
-    transition: background-color 0.5s ease-in-out;
+    z-index:3;
+    transition: background-color 0.3s linear 0.3s;    
 }
 
 .header.open{
     background-color:#FAFAFF;
+    transition: background-color 0.3s linear;
+    position:fixed;
 }
 
 #header-logo{
     font:normal 30px Cookie;
     color:#FAFAFF;
-}
-
-.open #header-logo{
-    color:#313131;
+    transition: color 0.2s linear 0.3s;
 }
 
 #hamburger{
     position: absolute;
     font-size: 44px;
     top: -0.5rem;
-    right: 1.5rem;
+    right: 0.7rem;
     color:#FAFAFF;
-    z-index:2;
+    z-index:3;
+    transition: color 0.2s linear 0.3s;
 }
 
-#hamburger.open{
+.open #header-logo, #hamburger.open{
     color:#313131;
+    transition: color 0s linear;
 }
 
 /* Styles adapted from https://cade.codes */
@@ -98,30 +162,35 @@ a {
     position:fixed;
     background-color:#FAFAFF;
     Width: 100vw;
-    z-index:1;
+    z-index:2;
     list-style:none;
     padding-inline-start:0;
     font-size:44px;
     font-weight:700;
     color:#fafaff;
     text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     margin:0;
     transform: translateY(-100vh);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.4s ease 0.2s;
+}
+
+.nav-links li{
+    margin: 0.5em 0em;
 }
 
 .nav-links li:hover{ 
     color: #F94B71;
 }
 
-
 .nav-links.open{
     visibility:visible;
     transform:translateY(0);
 }
 
-/* --- Jumbotron (Hero) Related Styling --- */
+/* ================================================== */
+/* Jumbotron Styling                                  */
+/* ================================================== */
 #jumbotron{
     background-color: #313131;
     width: 100%;
@@ -132,8 +201,9 @@ a {
 }
 
 #jumbotron p{
-    color:#FAFAFF;
+    color:#D1D1D1;
     margin: 1.6em 0;
+    width: 90%;
 }
 
 #jumbotron .jumbotron-container{
@@ -157,8 +227,34 @@ a {
     border: #fff;
     color: #fefefe;
     margin-top:1.2em;
-    padding: 1em;
+    padding: 1em 1.8em;
     border-radius: 3px;
+    transition: color 0.5s linear 0.1s;
+}
+
+.resume-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.resume-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.resume-button:hover span {
+    padding-right: 25px;
+}
+
+.resume-button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .jumbotron-image{
@@ -170,20 +266,26 @@ a {
 }
 
 
+/* display the command line blinking cursor */
 @media(min-width:340px){
     #cmd-cursor{ display: inline; }
 }
 
 @media(min-width:500px){
+    #hamburger{
+        right:1.5rem;
+    }
+
     #jumbotron-salutation{
         font-size: 2em;
     }
     #cmd{
-        font-size:4.6em;
+        font-size:5em;
     }
     .resume-button{
-        font-size:1em;
+        font-size:18px;
     }
+
 }
 
 @media(min-width:900px){
@@ -212,4 +314,13 @@ a {
         max-width:400px;
         max-height:400px;
     }
+}
+
+/* ================================================== */
+/* Experience Section                                 */
+/* ================================================== */
+.timeline-title-elements{
+    display:inline-block;
+    font-size:25px;
+    padding: 0 0.2em;
 }

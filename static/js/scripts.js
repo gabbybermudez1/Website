@@ -50,17 +50,21 @@ const toggle_header = () => {
     var header = document.querySelector('.header');
     var nav = document.querySelector(".nav-links");
     var hamburger = document.querySelector("#hamburger");
+    var overlay = document.querySelector("#overlay");
+    // if header is currently closed
     if(header.className === "header"){
         header.className += ' open';
         nav.className += ' open';
         hamburger.className += " open";
-    
+        overlay.style.display = "block";
+            
     }
 
     else{
         header.className = "header";
         nav.className="nav-links";
         hamburger.className= "";
+        overlay.style.display = "none";
     }
 }
 
