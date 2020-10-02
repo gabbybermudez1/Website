@@ -79,7 +79,7 @@ section{
 }
 
 .section-title{
-    font-size: 2.4em;
+    font-size: 3.5rem;
     margin-bottom: 0.2em;
 }
 
@@ -92,12 +92,12 @@ section{
 
 .section-title-divider{
     height:4px;
-    width: 90px;
+    width: 130px;
     background: #F94B71;
 }
 
 .section-subtitle{
-    font-size: 12px;
+    font-size: 14px;
     color: #8D8A8A;
     margin-left: 0.5em;
     font-weight:500;
@@ -149,7 +149,15 @@ section{
     right: 0.7rem;
     color:#FAFAFF;
     z-index:3;
-    transition: color 0.2s linear 0.3s;
+    transition: color 0.2s linear 0.1s;
+}
+
+#hamburger:hover{
+    color: #F94B71;
+}
+
+#hamburger.open{
+    position:fixed;
 }
 
 .open #header-logo, #hamburger.open{
@@ -323,8 +331,103 @@ section{
 /* ================================================== */
 /* Experience Section                                 */
 /* ================================================== */
+
 .timeline-title-elements{
-    display:inline-block;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.timeline-container{
+    width:100%;
+}
+
+.timeline{
+    position:relative;
+}
+
+.timeline:before{
+    content: '';
+    height:90%;
+    width: 3px;
+    position:absolute;
+    background-color: #D1D1D1;
+    top:10px;
+    left:0;
+}
+
+.timeline ul{
+    list-style:none;
+    padding: 20px;
+}
+
+.timeline ul li{
+    margin-bottom: 5rem;
+    padding: 10px;
+    position:relative;
+}
+
+/* 
+    Note:
+
+    This is the timeline "ball". To put this at the corner, make sure the parent (the 
+    li) has position: relative. That way, we can position this ball as absolute and it
+    will be absolute relative to its parent. Now we set top and left to be at 0 so that
+    it is at the beginning of the li container. Now, make sure that we translate so 
+    that it sits on the outer corner.
+    
+    To make it fit the timeline, we translate it 
+*/
+.timeline ul li::after{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #F94B71;
+    border-radius:20px;
+    top:0;
+    left:-19px;
+    transform:translate(-50%, -50%);
+    z-index:1;
+  }
+
+  .timeline ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+    border:2px solid #F94B71;
+    border-radius:20px;
+    top:0;
+    left:-19px;
+    transform:translate(-50%, -50%);
+    z-index:1;
+  }
+
+.timeline-entry .timeline-entry-title{
+    font-weight: 500;
     font-size:25px;
-    padding: 0 0.2em;
+    color:#313131;
+}
+
+.timeline-entry .timeline-entry-date{
+    font-weight: 500;
+    font-size:14px;
+    color:#4772d1;;
+    margin: 0.3rem 0;
+}
+
+.timeline-entry button{
+    border: 2px solid #F94B71;
+    background-color: #fff;
+    font-weight:600;
+    color:#F94B71;
+    padding: 10px 20px;
+    transition: all 0.25s linear;
+}
+
+.timeline-entry button:hover{
+    border: 2px solid #F94B71;
+    background-color: #F94B71;
+    color:#FFF;
 }
