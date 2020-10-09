@@ -13,12 +13,16 @@ body {
     line-height: 1.6;    
 }
 
-p{
+p,li{
     font-size: 14px;
 }
 
 ul{
     list-style:none;
+}
+
+h3{
+    font-weight:500;
 }
 
 a {
@@ -65,7 +69,6 @@ section{
 }
 
 .section-subtitle p{
-    font-size: 14px;
     color: #8D8A8A;
     margin-left: 0.5em;
     font-weight:500;
@@ -82,23 +85,23 @@ section{
 }
 
 @media(min-width:500px){
-    p{  
-        font-size:18px;
+    p, li{  
+        font-size:16px;
+    }
+
+    h3{
+        font-size:33px;
     }
     .pad-content{
         padding: 0 3.1em;
     }
 
     .section-title{
-        font-size:4.5rem;
+        font-size:4rem;
     }
 
-    .section-title{
-        font-size:3em;
-    }
-
-    .section-title-divider{
-        width:110px;
+    .section-subtitle div{
+        width:150px;
     }
 }
 
@@ -181,10 +184,6 @@ section{
 /* ================================================== */
 /* Jumbotron Styling                                  */
 /* ================================================== */
-.jumbotron-container{
-    z-index:0;
-}
-
 #jumbotron{
     background-color: #313131;
     width: 100%;
@@ -206,7 +205,6 @@ section{
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 14px;
     font-weight: 600;
     padding: 1.2em;
     width: 150px;
@@ -258,7 +256,6 @@ section{
     display:none;
 }
 
-
 /* display the command line blinking cursor */
 @media(min-width:340px){
     #cmd-cursor{ display: inline; }
@@ -284,7 +281,6 @@ section{
 @media(min-width:900px){
     .jumbotron-container{
         display:flex;
-        flex-direction:row;
         justify-content:space-between;
         width:100%;
         align-items:center;
@@ -311,15 +307,13 @@ section{
 /* ================================================== */
 /* Experience Section                                 */
 /* ================================================== */
-
 .timeline-title-elements{
     font-size: 40px;
     margin-bottom: 1.5rem;
-    margin-left:-3px;
+    margin-left:-8px;
 }
 
 .timeline-container{
-    width:100%;
     flex:1;
 }
 
@@ -338,7 +332,6 @@ section{
 }
 
 .timeline > ul{
-    list-style:none;
     padding: 20px;
 }
 
@@ -398,7 +391,6 @@ section{
 
 .timeline-entry .timeline-entry-date{
     font-weight: 500;
-    font-size:14px;
     color:#4772d1;;
     margin: 0.7rem 0;
 }
@@ -417,13 +409,9 @@ section{
     border: 2px solid #F94B71;
     background-color: #F94B71;
     color:#FFF;
+    font-weight:600;
 }
 
-
-.timeline-entry ul{
-    list-style:none;
-    font-size: 14px;
-}
 
 .timeline-entry ul li{
     position:relative;
@@ -450,7 +438,6 @@ section{
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
-    /* transition: visibility 0s linear 0s, opacity 900ms; */
     transition: transform 0.7s ease, opacity 0.5s ease-in 0.2s;
 }
 

@@ -12,7 +12,7 @@
                     {{range $index, $element := .Site.Data.experience}}
                         <li>
                             <div class="timeline-entry">
-                                <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
+                                <h3 >{{.title}} - {{$index}}</h3>
                                 <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
                                 <button> More Details</button>
                                 <ul class="list-fadeOut delay-position">
@@ -33,7 +33,7 @@
                     {{range $index, $element := .Site.Data.education}}
                         <li>
                             <div class="timeline-entry" id="timeline-entry">
-                                <p class="timeline-entry-title" >{{.name}}</p>
+                                <h3 >{{.name}}</h3>
                                 <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
                                 <button> More Details</button>
                                 <ul class="list-fadeOut delay-position">
