@@ -72,3 +72,39 @@ var resume_button = document.querySelector("#jumbotron button");
 resume_button.onclick = function(){
     location.href="resume/GabbyBermudez_Resume.pdf";
 }
+
+// ------------ List items in the header section ------------
+var all_experience_buttons = document.querySelectorAll(".timeline-entry button");
+
+for(var i = 0; i < all_experience_buttons.length ; i++){
+    // Toggle the display of the details
+    var sibling;
+    var sibling_style;
+    all_experience_buttons[i].addEventListener("click", function(event){
+        sibling = this.nextElementSibling
+        // sibling_style = window.getComputedStyle(sibling);
+        // if(sibling_style.visibility == "hidden"){
+        //     sibling.style.visibility = "visible";
+        //     sibling.style.position = "relative";
+        // }
+        // else{
+        //     sibling.style.visibility = "hidden";
+        //     sibling.style.position = "absolute";
+        // }
+        if(sibling.classList.contains("list-fadeOut")){
+            sibling.classList.remove("list-fadeOut");
+            sibling.classList.remove("delay-position");
+            sibling.classList.add("list-fadeIn");
+
+        }
+
+        else{
+            sibling.classList.remove("list-fadeIn");
+            sibling.classList.add("list-fadeOut");
+            setTimeout(function(){
+                sibling.classList.add("delay-position")
+            },290)
+        }
+    })
+}    
+

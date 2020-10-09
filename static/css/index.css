@@ -10,7 +10,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.6;    
 }
 
 h1,h2,h3,h5,p{
@@ -28,7 +28,7 @@ a {
 }
 
 section{
-    margin-top: 3em;
+    margin: 3em 0;
 }
 
 
@@ -38,6 +38,10 @@ section{
 
 .purple-text{
     color: #4772d9 ;
+}
+
+.delay-position{
+    position: absolute;
 }
 
 #overlay{
@@ -57,12 +61,22 @@ section{
     padding: 0 1.5rem;
 }
 
+.section-title-divider{
+    height:4px;
+    width: 115px;
+    background: #F94B71;
+}
+
 @media(min-width:500px){
     p{  
         font-size:18px;
     }
     .pad-content{
         padding: 0 3.1em;
+    }
+
+    .section-title{
+        font-size:4.5rem;
     }
 }
 
@@ -79,7 +93,7 @@ section{
 }
 
 .section-title{
-    font-size: 2.4em;
+    font-size: 3.1rem;
     margin-bottom: 0.2em;
 }
 
@@ -90,14 +104,9 @@ section{
 }
 
 
-.section-title-divider{
-    height:4px;
-    width: 90px;
-    background: #F94B71;
-}
 
 .section-subtitle{
-    font-size: 12px;
+    font-size: 14px;
     color: #8D8A8A;
     margin-left: 0.5em;
     font-weight:500;
@@ -125,9 +134,10 @@ section{
     position:absolute;
     padding: 0.5rem 1rem;
     background-color: #313131;
-    width:100vw;
+    width:100%;
     z-index:3;
-    transition: background-color 0.3s linear 0.3s;    
+    transition: background-color 0.3s linear 0.3s;
+  
 }
 
 .header.open{
@@ -149,7 +159,15 @@ section{
     right: 0.7rem;
     color:#FAFAFF;
     z-index:3;
-    transition: color 0.2s linear 0.3s;
+    transition: color 0.2s linear 0.1s;
+}
+
+#hamburger:hover{
+    color: #F94B71;
+}
+
+#hamburger.open{
+    position:fixed;
 }
 
 .open #header-logo, #hamburger.open{
@@ -289,7 +307,6 @@ section{
         font-size:18px;
         width: 200px;
     }
-
 }
 
 @media(min-width:900px){
@@ -319,12 +336,161 @@ section{
         max-height:400px;
     }
 }
-
 /* ================================================== */
 /* Experience Section                                 */
 /* ================================================== */
+
 .timeline-title-elements{
-    display:inline-block;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+    margin-left:-3px;
+}
+
+.timeline-container{
+    width:100%;
+    flex:1;
+}
+
+.timeline{
+    position:relative;
+}
+
+.timeline:before{
+    content: '';
+    height:90%;
+    width: 2px;
+    position:absolute;
+    background-color: #3131311a;
+    top:10px;
+    left:5px;
+}
+
+.timeline > ul{
+    list-style:none;
+    padding: 20px;
+}
+
+.timeline > ul > li{
+    margin-bottom: 5rem;
+    padding: 10px;
+    position:relative;
+}
+
+/* 
+    Note:
+
+    This is the timeline "ball". To put this at the corner, make sure the parent (the 
+    li) has position: relative. That way, we can position this ball as absolute and it
+    will be absolute relative to its parent. Now we set top and left to be at 0 so that
+    it is at the beginning of the li container. Now, make sure that we translate so 
+    that it sits on the outer corner.
+    
+    To make it fit the timeline, we translate it 
+*/
+.timeline > ul > li::after{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #F94B71;
+    border-radius:20px;
+    top:0;
+    left:-15px;
+    transform:translate(-50%, -50%);
+    z-index:1;
+  }
+
+  .timeline > ul > li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+    border:2px solid #F94B71;
+    border-radius:20px;
+    top:0;
+    left:-15px;
+    transform:translate(-50%, -50%);
+    z-index:1;
+  }
+
+.timeline-entry{
+    position:relative;
+}
+
+.timeline-entry .timeline-entry-title{
+    font-weight: 500;
     font-size:25px;
-    padding: 0 0.2em;
+    color:#313131;
+}
+
+.timeline-entry .timeline-entry-date{
+    font-weight: 500;
+    font-size:14px;
+    color:#4772d1;;
+    margin: 0.7rem 0;
+}
+
+.timeline-entry button{
+    border: 1px solid #F94B71;
+    background-color: #fff;
+    color:#F94B71;
+    padding: 10px 20px;
+    transition: all 0.25s linear;
+    margin-bottom: 1.3em;
+
+}
+
+.timeline-entry button:hover{
+    border: 2px solid #F94B71;
+    background-color: #F94B71;
+    color:#FFF;
+}
+
+
+.timeline-entry ul{
+    list-style:none;
+    font-size: 14px;
+}
+
+.timeline-entry ul li{
+    position:relative;
+    padding: 14px 1.5em;
+}
+
+.timeline-entry ul li:before{
+    content: "\25B6";
+    color: #F94B71;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.list-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transform:translateY(-100%);
+    transition:  all 0.2s ease-in-out, transform 0.7s ease;
+}
+
+.list-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    /* transition: visibility 0s linear 0s, opacity 900ms; */
+    transition: transform 0.7s ease, opacity 0.5s ease-in 0.2s;
+}
+
+.timeline-layout{
+    display:flex;
+    flex-direction:column;
+}
+
+@media(min-width:850px){
+    .timeline-layout{
+        display:flex;
+        flex-direction:row;
+        
+    }
 }

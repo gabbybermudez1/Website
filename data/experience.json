@@ -1,5 +1,24 @@
 {
-    "job": "IBM",
-    "year": 2017,
-    "tech": "Linux"
+    "CoderDojo":{
+        "company": "CoderDojo",
+        "start": "September 2019",
+        "end": "February 2020",
+        "title": "Mentor",
+        "details": [
+            "Tutored kids aged 7-17 in building games and projects using Python, Java, HTML/CSS/JavaScript",
+            "Explained technical concepts to non-technical audiences"
+        ]
+    },
+    "IBM":{
+        "company": "IBM",
+        "start": "September 2017",
+        "end": "August 2018",
+        "title": "Technical Analyst",
+        "details": [
+            "Managed over 200 cases on a team with the highest NPS in North America",
+            "Assisted clients in resolving IBM Cognos Analytics issues relating to database integration, security, and data reporting",
+            "Linux Administration (RedHat, SUSE, and Ubuntu)",
+            "Managed relational databases (MySQL, Microsoft SQL Server, Oracle) as well as dimensional data"
+        ]
+    }
 }
