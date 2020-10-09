@@ -173,6 +173,11 @@ section{
     margin: 0.5em 0em;
 }
 
+.nav-links li:hover{
+    color:#F94B71;
+    transition: color 0.4s ease;
+}
+
 .nav-links.open{
     transform:translateY(0);
 }
