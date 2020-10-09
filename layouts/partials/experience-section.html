@@ -14,7 +14,7 @@
                             <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
                             <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
                             <button> More Details</button>
-                            <ul>
+                            <ul class="list-fadeOut">
                                 {{range .details}}
                                     <li> {{.}}</li>
                                 {{end}}

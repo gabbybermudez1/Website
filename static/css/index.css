@@ -405,6 +405,10 @@ a {
     z-index:1;
   }
 
+.timeline-entry{
+    position:relative;
+}
+
 .timeline-entry .timeline-entry-title{
     font-weight: 500;
     font-size:25px;
@@ -438,9 +442,7 @@ a {
 
 .timeline-entry ul{
     list-style:none;
-    display:none;
     font-size: 14px;
-    list-style-position: inside;
 }
 
 .timeline-entry ul li{
@@ -455,5 +457,18 @@ a {
     display: inline-block;
     position: absolute;
     left: 0;
+}
 
+
+.list-fadeOut {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+}
+
+.list-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
 }

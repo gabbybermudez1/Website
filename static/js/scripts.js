@@ -82,12 +82,23 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
     var sibling_style;
     all_experience_buttons[i].addEventListener("click", function(event){
         sibling = this.nextElementSibling
-        sibling_style = window.getComputedStyle(sibling);
-        if(sibling_style.display == "none"){
-            sibling.style.display = "block"
+        // sibling_style = window.getComputedStyle(sibling);
+        // if(sibling_style.visibility == "hidden"){
+        //     sibling.style.visibility = "visible";
+        //     sibling.style.position = "relative";
+        // }
+        // else{
+        //     sibling.style.visibility = "hidden";
+        //     sibling.style.position = "absolute";
+        // }
+        if(sibling.classList.contains("list-fadeOut")){
+            sibling.classList.remove("list-fadeOut");
+            sibling.classList.add("list-fadeIn");
         }
+
         else{
-            sibling.style.display = "none";
+            sibling.classList.remove("list-fadeIn");
+            sibling.classList.add("list-fadeOut");
         }
     })
 }    
