@@ -1,8 +1,8 @@
 <section id="experience" class="pad-content">
     <h2 class="section-title"> Experience </h2>
-    <div class="section-subtitle-wrapper"> 
-        <div class="section-title-divider"></div>
-        <p class="section-subtitle"> My Awesome Journey</p>
+    <div class="section-subtitle"> 
+        <div></div>
+        <p> My Awesome Journey</p>
     </div>
     <div class="timeline-layout">
         <div class="timeline-container">
@@ -12,7 +12,7 @@
                     {{range $index, $element := .Site.Data.experience}}
                         <li>
                             <div class="timeline-entry">
-                                <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
+                                <h3 >{{.title}} - {{$index}}</h3>
                                 <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
                                 <button> More Details</button>
                                 <ul class="list-fadeOut delay-position">
@@ -33,7 +33,7 @@
                     {{range $index, $element := .Site.Data.education}}
                         <li>
                             <div class="timeline-entry" id="timeline-entry">
-                                <p class="timeline-entry-title" >{{.name}}</p>
+                                <h3 >{{.name}}</h3>
                                 <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
                                 <button> More Details</button>
                                 <ul class="list-fadeOut delay-position">
