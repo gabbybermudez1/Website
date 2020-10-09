@@ -156,7 +156,6 @@ section{
 
 /* Styles adapted from https://cade.codes */
 .nav-links{
-    font-size: 44px;
     background-color:#FAFAFF;
     font-weight:700;
     color:#FAFAFF;
@@ -170,6 +169,7 @@ section{
 }
 
 .nav-links li{
+    font-size: 44px;
     margin: 0.5em 0em;
 }
 
