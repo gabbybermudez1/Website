@@ -4,26 +4,23 @@
         <div class="section-title-divider"></div>
         <p class="section-subtitle"> My Awesome Journey</p>
     </div>
-    <!-- <i class="las la-code timeline-title-elements" ></i> -->
-    <h4 class="timeline-title-elements"><span style="color:#4772d1;  margin-right: 0.5em;"> </></span> Work Experience </h4>
-
+    <h4 class="timeline-title-elements"></> </h4>
     <div class="timeline-container">
         <div class="timeline">
             <ul>
-                <li>
-                    <div class="timeline-entry">
-                        <p class="timeline-entry-title">Mentor @ CoderDojo</p>
-                        <p class="timeline-entry-date">September 2019 - February 2020</p>
-                        <button>More Details</button>
-                    </div> 
-                </li>
-                <li>
-                    <div class="timeline-entry">
-                        <p class="timeline-entry-title">Technical Analyst @ IBM</p>
-                        <p class="timeline-entry-date">September 2017 - August 2018 <span style="color:#313131; margin: 0 0.3rem;"> | </span> May 2019 - August 2019</p>
-                        <button>More Details</button>
-                    </div> 
-                </li>
+                {{range $index, $element := .Site.Data.experience}}
+                    <li>
+                        <div class="timeline-entry" id="timeline-entry-{{$index}}">
+                            <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
+                            <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
+                            <button> More Details</button>
+                            <ul>
+                                {{range .details}}
+                                    <li> {{.}}</li>
+                                {{end}}
+                            </ul>
+                        </div> 
+                {{end}}
             </ul>
         </div>
     </div>

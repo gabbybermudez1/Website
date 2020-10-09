@@ -10,7 +10,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.6;    
 }
 
 h1,h2,h3,h5,p{
@@ -27,9 +27,9 @@ a {
     color: inherit;
 }
 
-section{
+/* section{
     margin-top: 3em;
-}
+} */
 
 
 .pink-text{
@@ -79,7 +79,7 @@ section{
 }
 
 .section-title{
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     margin-bottom: 0.2em;
 }
 
@@ -92,7 +92,7 @@ section{
 
 .section-title-divider{
     height:4px;
-    width: 130px;
+    width: 115px;
     background: #F94B71;
 }
 
@@ -125,9 +125,10 @@ section{
     position:absolute;
     padding: 0.5rem 1rem;
     background-color: #313131;
-    width:100vw;
+    width:100%;
     z-index:3;
-    transition: background-color 0.3s linear 0.3s;    
+    transition: background-color 0.3s linear 0.3s;
+  
 }
 
 .header.open{
@@ -348,19 +349,19 @@ section{
 .timeline:before{
     content: '';
     height:90%;
-    width: 3px;
+    width: 2px;
     position:absolute;
     background-color: #D1D1D1;
     top:10px;
     left:0;
 }
 
-.timeline ul{
+.timeline > ul{
     list-style:none;
     padding: 20px;
 }
 
-.timeline ul li{
+.timeline > ul > li{
     margin-bottom: 5rem;
     padding: 10px;
     position:relative;
@@ -377,7 +378,7 @@ section{
     
     To make it fit the timeline, we translate it 
 */
-.timeline ul li::after{
+.timeline > ul > li::after{
     content: '';
     position: absolute;
     height: 12px;
@@ -390,7 +391,7 @@ section{
     z-index:1;
   }
 
-  .timeline ul li::before{
+  .timeline > ul > li::before{
     content: '';
     position: absolute;
     height: 20px;
@@ -414,7 +415,7 @@ section{
     font-weight: 500;
     font-size:14px;
     color:#4772d1;;
-    margin: 0.3rem 0;
+    margin: 0.7rem 0;
 }
 
 .timeline-entry button{
@@ -424,10 +425,23 @@ section{
     color:#F94B71;
     padding: 10px 20px;
     transition: all 0.25s linear;
+    margin-bottom: 1.3em;
+
 }
 
 .timeline-entry button:hover{
     border: 2px solid #F94B71;
     background-color: #F94B71;
     color:#FFF;
+}
+
+
+.timeline-entry ul{
+    display:none;
+    font-size: 14px;
+    list-style-position: inside;
+}
+
+.timeline-entry ul li{
+    padding: 14px 0;
 }
