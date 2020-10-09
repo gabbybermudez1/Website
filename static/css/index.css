@@ -17,6 +17,10 @@ p{
     font-size: 14px;
 }
 
+ul{
+    list-style:none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -119,10 +123,9 @@ section{
 .header.open{
     background-color:#FAFAFF;
     transition: background-color 0.3s linear;
-    position:fixed;
 }
 
-#header-logo{
+.header #header-logo{
     font:normal 30px Cookie;
     color:#FAFAFF;
     transition: color 0.2s linear 0.3s;
@@ -140,46 +143,39 @@ section{
 
 #hamburger:hover{
     color: #F94B71;
-}
-
-#hamburger.open{
-    position:fixed;
+    transition: color 0.5s ease;
 }
 
 .open #header-logo, #hamburger.open{
     color:#313131;
-    transition: color 0s linear;
+    transition: color 0.3s linear;
 }
 
 /* Styles adapted from https://cade.codes */
 .nav-links{
-    position:fixed;
+    font-size: 44px;
     background-color:#FAFAFF;
-    Width: 100vw;
-    z-index:3;
-    list-style:none;
-    padding-inline-start:0;
-    font-size:44px;
     font-weight:700;
-    color:#fafaff;
+    color:#FAFAFF;
     text-shadow:-1px -1px 0 #313131, 1px -1px 0 #313131, -1px 1px 0 #313131, 1px 1px 0 #313131;
-    padding: 3rem 1rem;
-    margin:0;
-    transform: translateY(-100vh);
-    transition: transform 0.4s ease 0.2s;
+    padding:3rem 1rem;
+    position:absolute;
+    width:100%;
+    transform: translateY(-100%);
+    z-index:3;
+    transition: transform 0.4s ease 0.2s; 
 }
 
 .nav-links li{
     margin: 0.5em 0em;
 }
 
-.nav-links li:hover{ 
-    color: #F94B71;
+.nav-links.open{
+    transform:translateY(0);
 }
 
-.nav-links.open{
-    visibility:visible;
-    transform:translateY(0);
+.open{
+    position:fixed;
 }
 
 /* ================================================== */
