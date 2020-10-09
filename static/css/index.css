@@ -437,11 +437,23 @@ a {
 
 
 .timeline-entry ul{
+    list-style:none;
     display:none;
     font-size: 14px;
     list-style-position: inside;
 }
 
 .timeline-entry ul li{
-    padding: 14px 0;
+    position:relative;
+    padding: 14px 1.5em;
+}
+
+.timeline-entry ul li:before{
+    content: "\25B6";
+    color: #F94B71;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+
 }
