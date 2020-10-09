@@ -93,12 +93,17 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
         // }
         if(sibling.classList.contains("list-fadeOut")){
             sibling.classList.remove("list-fadeOut");
+            sibling.classList.remove("delay-position");
             sibling.classList.add("list-fadeIn");
+
         }
 
         else{
             sibling.classList.remove("list-fadeIn");
             sibling.classList.add("list-fadeOut");
+            setTimeout(function(){
+                sibling.classList.add("delay-position")
+            },290)
         }
     })
 }    

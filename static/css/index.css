@@ -27,9 +27,9 @@ a {
     color: inherit;
 }
 
-/* section{
-    margin-top: 3em;
-} */
+section{
+    margin: 3em 0;
+}
 
 
 .pink-text{
@@ -38,6 +38,10 @@ a {
 
 .purple-text{
     color: #4772d9 ;
+}
+
+.delay-position{
+    position: absolute;
 }
 
 #overlay{
@@ -57,12 +61,22 @@ a {
     padding: 0 1.5rem;
 }
 
+.section-title-divider{
+    height:4px;
+    width: 115px;
+    background: #F94B71;
+}
+
 @media(min-width:500px){
     p{  
         font-size:18px;
     }
     .pad-content{
         padding: 0 3.1em;
+    }
+
+    .section-title{
+        font-size:4.5rem;
     }
 }
 
@@ -90,11 +104,6 @@ a {
 }
 
 
-.section-title-divider{
-    height:4px;
-    width: 115px;
-    background: #F94B71;
-}
 
 .section-subtitle{
     font-size: 14px;
@@ -298,7 +307,6 @@ a {
         font-size:18px;
         width: 200px;
     }
-
 }
 
 @media(min-width:900px){
@@ -328,18 +336,19 @@ a {
         max-height:400px;
     }
 }
-
 /* ================================================== */
 /* Experience Section                                 */
 /* ================================================== */
 
 .timeline-title-elements{
-    font-size: 20px;
-    margin-bottom: 2rem;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+    margin-left:-3px;
 }
 
 .timeline-container{
     width:100%;
+    flex:1;
 }
 
 .timeline{
@@ -351,9 +360,9 @@ a {
     height:90%;
     width: 2px;
     position:absolute;
-    background-color: #D1D1D1;
+    background-color: #3131311a;
     top:10px;
-    left:0;
+    left:5px;
 }
 
 .timeline > ul{
@@ -386,7 +395,7 @@ a {
     background-color: #F94B71;
     border-radius:20px;
     top:0;
-    left:-19px;
+    left:-15px;
     transform:translate(-50%, -50%);
     z-index:1;
   }
@@ -400,7 +409,7 @@ a {
     border:2px solid #F94B71;
     border-radius:20px;
     top:0;
-    left:-19px;
+    left:-15px;
     transform:translate(-50%, -50%);
     z-index:1;
   }
@@ -423,9 +432,8 @@ a {
 }
 
 .timeline-entry button{
-    border: 2px solid #F94B71;
+    border: 1px solid #F94B71;
     background-color: #fff;
-    font-weight:600;
     color:#F94B71;
     padding: 10px 20px;
     transition: all 0.25s linear;
@@ -459,16 +467,30 @@ a {
     left: 0;
 }
 
-
 .list-fadeOut {
     visibility: hidden;
-    position: absolute;
     opacity: 0;
-    top: 0;
+    transform:translateY(-100%);
+    transition:  all 0.2s ease-in-out, transform 0.7s ease;
 }
 
 .list-fadeIn {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s linear 0s, opacity 300ms;
+    transform: translateY(0);
+    /* transition: visibility 0s linear 0s, opacity 900ms; */
+    transition: transform 0.7s ease, opacity 0.5s ease-in 0.2s;
+}
+
+.timeline-layout{
+    display:flex;
+    flex-direction:column;
+}
+
+@media(min-width:850px){
+    .timeline-layout{
+        display:flex;
+        flex-direction:row;
+        
+    }
 }

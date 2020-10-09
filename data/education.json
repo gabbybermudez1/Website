@@ -1,0 +1,12 @@
+{
+    "university":{
+        "name": "Queen's University",
+        "start":"September 2014",
+        "end":"April 2020",
+        "details":[
+            "Computing (Honours) Major",
+            "Mathematics Minor",
+            "Capstone Project: Implementing source code plagiarism detection programs"
+        ]
+    }
+}

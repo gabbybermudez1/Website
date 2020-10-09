@@ -4,24 +4,47 @@
         <div class="section-title-divider"></div>
         <p class="section-subtitle"> My Awesome Journey</p>
     </div>
-    <h4 class="timeline-title-elements"></> </h4>
-    <div class="timeline-container">
-        <div class="timeline">
-            <ul>
-                {{range $index, $element := .Site.Data.experience}}
-                    <li>
-                        <div class="timeline-entry" id="timeline-entry-{{$index}}">
-                            <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
-                            <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
-                            <button> More Details</button>
-                            <ul class="list-fadeOut">
-                                {{range .details}}
-                                    <li> {{.}}</li>
-                                {{end}}
-                            </ul>
-                        </div> 
-                {{end}}
-            </ul>
+    <div class="timeline-layout">
+        <div class="timeline-container">
+            <h4 class="timeline-title-elements las la-briefcase"></h4>
+            <div class="timeline">
+                <ul>
+                    {{range $index, $element := .Site.Data.experience}}
+                        <li>
+                            <div class="timeline-entry">
+                                <p class="timeline-entry-title" >{{.title}} @ {{$index}}</p>
+                                <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
+                                <button> More Details</button>
+                                <ul class="list-fadeOut delay-position">
+                                    {{range .details}}
+                                        <li> {{.}}</li>
+                                    {{end}}
+                                </ul>
+                            </div> 
+                    {{end}}
+                </ul>
+            </div>
         </div>
-    </div>
+        <!-- Education Section -->
+        <div class="timeline-container">
+            <i class="las la-user-graduate timeline-title-elements"></i>
+            <div class="timeline">
+                <ul>
+                    {{range $index, $element := .Site.Data.education}}
+                        <li>
+                            <div class="timeline-entry" id="timeline-entry">
+                                <p class="timeline-entry-title" >{{.name}}</p>
+                                <p class="timeline-entry-date">{{ .start}} - {{.end}}</p>
+                                <button> More Details</button>
+                                <ul class="list-fadeOut delay-position">
+                                    {{range .details}}
+                                        <li> {{.}}</li>
+                                    {{end}}
+                                </ul>
+                            </div> 
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>  <!-- end custom wrapper -->
 </section>
