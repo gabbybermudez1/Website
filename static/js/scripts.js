@@ -4,7 +4,6 @@ const toggle_menu_mobile = () => {
     nav_list.style.visibility = (nav_list.style.visibility == "hidden" ? "block" : "hidden")
 }
 
-
 /**
  * Blink is the Function used  to make the cursor on the command line
  * flash every so often. 
@@ -19,7 +18,6 @@ const blink = () => {
     }
 }
 
-
 /**
  * type_effect is a function used to type out my name on the command
  * line.
@@ -33,9 +31,9 @@ const type_effect = () => {
     }
 }
 
-
-
-// wait for DOM to load before executing the command cusror
+/**
+ * Jumbotron-Related Styling
+ */
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
 
@@ -45,7 +43,9 @@ counter = 0;
 command = document.querySelector("#cmd-type");
 setTimeout(type_effect, 1200);
 
-
+/**
+ * Header related functions
+ */
 const toggle_header = () => {
     var header = document.querySelector('.header');
     var nav = document.querySelector(".nav-links");
@@ -68,6 +68,15 @@ const toggle_header = () => {
     }
 }
 
+var all_links = document.querySelectorAll(".nav-links a");
+for(var i=0; i < all_links.length; i++){
+    all_links[i].addEventListener("click", function(){
+        toggle_header();
+    })
+}
+
+
+
 var resume_button = document.querySelector("#jumbotron button");
 resume_button.onclick = function(){
     location.href="resume/GabbyBermudez_Resume.pdf";
@@ -82,15 +91,6 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
     var sibling_style;
     all_experience_buttons[i].addEventListener("click", function(event){
         sibling = this.nextElementSibling
-        // sibling_style = window.getComputedStyle(sibling);
-        // if(sibling_style.visibility == "hidden"){
-        //     sibling.style.visibility = "visible";
-        //     sibling.style.position = "relative";
-        // }
-        // else{
-        //     sibling.style.visibility = "hidden";
-        //     sibling.style.position = "absolute";
-        // }
         if(sibling.classList.contains("list-fadeOut")){
             sibling.classList.remove("list-fadeOut");
             sibling.classList.remove("delay-position");
@@ -107,4 +107,5 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
         }
     })
 }    
+
 
