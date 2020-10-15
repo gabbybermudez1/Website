@@ -76,7 +76,6 @@ for(var i=0; i < all_links.length; i++){
 }
 
 
-
 var resume_button = document.querySelector("#jumbotron button");
 resume_button.onclick = function(){
     location.href="resume/GabbyBermudez_Resume.pdf";
