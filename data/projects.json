@@ -1,0 +1,14 @@
+{
+    "2sign":{
+        "name": "2Sign",
+        "thumbnail": "2sign-scaled.png"
+    },
+    "source_code_similarity_detection":{
+        "name": "Source Code Similarity Detector",
+        "thumbnail": "code-scaled.png"
+    },
+    "meridio":{
+        "name": "Meridio Rideshares",
+        "thumbnail": "meridio-scaled.png"
+    }
+}
