@@ -31,8 +31,9 @@ const type_effect = () => {
     }
 }
 
-/**
+/**===========================================================
  * Jumbotron-Related Styling
+ * ===========================================================
  */
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
@@ -107,4 +108,37 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
     })
 }    
 
+/**===========================================================
+ *  Projects Section Related Scripts
+ * ===========================================================
+ */
+// instanciate new modal
+var modal = new tingle.modal({
+    footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Close",
+    cssClass: ['custom-class-1', 'custom-class-2'],
+    onOpen: function() {
+        console.log('modal open');
+    },
+    onClose: function() {
+        console.log('modal closed');
+    },
+});
+
+// set content
+modal.setContent('<h1>Project Content Coming Soon</h1>');
+
+// add a button
+modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
+    // here goes some logic
+    modal.close();
+});
+
+// add another button
+modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function() {
+    // here goes some logic
+    modal.close();
+});
 

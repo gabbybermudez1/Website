@@ -393,6 +393,10 @@ section{
     position:relative;
 }
 
+.timeline-entry *{
+    font-weight: 500px;
+}
+
 .timeline-entry .timeline-entry-title{
     font-weight: 500;
     font-size:25px;
@@ -402,7 +406,6 @@ section{
 .timeline-entry .timeline-entry-date{
     font-weight: 500;
     color:#4772d1;;
-    margin: 0.7rem 0;
 }
 
 .timeline-entry button{
@@ -411,8 +414,8 @@ section{
     color:#F94B71;
     padding: 10px 20px;
     transition: all 0.25s linear;
-    margin-bottom: 1.3em;
-    font-weight:600;
+    margin: 1.5em 0;
+    font-weight:500;
 }
 
 .timeline-entry button:hover{
@@ -425,6 +428,7 @@ section{
 .timeline-entry ul li{
     position:relative;
     padding: 14px 1.5em;
+    font-weight: 400;
 }
 
 .timeline-entry ul li:before{
@@ -466,13 +470,16 @@ section{
 /* Projects  Section                                  */
 /* ================================================== */
 #projects-wrapper{
-    /* can alternatively do: #FFFBF5 */
-    /* background-color:#F9F6F1; */
-    background-color:#F5F5F5;
+    /* can alternatively do: #FFFBF5 2nd best one*/
+    /* background-color:#F9F6F1; => best one */
+    /* background-color:#F5F5F5; grey => derived from findmatthew.com*/
+    background-color: #f5efdf; 
     padding: 1rem;
 }
 
-/* TODO: change the classnames */
+.grow { transition: all .25s ease-in-out; cursor:pointer; }
+.grow:hover { transform: scale(1.15); }
+
 .project-gallery{
     /* allows us to get each image in a row that wraps around */
     display:flex;
@@ -480,16 +487,30 @@ section{
     justify-content: flex-start;
 }
 
-.gallery-item{
+.project-gallery .gallery-item{
+    width: 100%;
+    margin: 1em 0;
+}
+
+.project-gallery .gallery-item .gallery-image{
     position:relative;
-    width: 200px;
-    height:200px;
-    margin-top: 30px;
+    width: 250px;
+    height:250px;
     border: 2px solid #D1D1D1;
     background-position:center;
     background-size:contain;
     background-repeat: no-repeat;
 }
 
-.grow { transition: all .25s ease-in-out; cursor:pointer; }
-.grow:hover { transform: scale(1.15); }
+
+@media(min-width: 700px){
+    .project-gallery .gallery-item{
+        width: 50%;
+    }
+}
+
+@media(min-width: 1000px){
+    .project-gallery .gallery-item{
+        width: 33%;
+    }
+}

@@ -13,11 +13,9 @@
         </ul> -->
         <div class="project-gallery">
             {{range $index, $element := .Site.Data.projects}}
-            <div>
-                <div class="gallery-item grow" style="background-image:url('images/{{ .thumbnail }}')"></div>
-                <h3 style="color:#F94B71;"> {{ .name }}</h3>
-                <h4> Web Development </h4>
-            </div>
+                <div class="gallery-item" onclick="modal.open()">
+                    <div class="gallery-image grow" style="background-image:url('images/{{ .thumbnail }}')"></div>
+                </div>
             {{end}}
         </div>
 
