@@ -1,0 +1,37 @@
+<div id="projects-wrapper">
+    <section id="projects" class="pad-content">
+        <h2 class="section-title"> Projects </h2>
+        <div class="section-subtitle"> 
+            <div></div>
+            <p> Things I Like Working On</p>
+        </div>
+        <!-- <ul>
+            <li class="list" data-filter="all">All</li>
+            <li class="list" data-filter="web-development">Web Development</li>
+            <li class="list" data-filter="full-stack-development">Full Stack Development</li>
+            <li class="list" data-filter="implementation">Implementation / Systems Design</li>            
+        </ul> -->
+        <div class="project-gallery">
+            {{range $index, $element := .Site.Data.projects}}
+                <div class="gallery-item" id="project-{{.name}}">
+                    <div class="gallery-image grow" style="background-image:url('images/{{ .thumbnail }}')"></div>
+                </div>
+                <div class="modal-content" style="display:none;" >
+                    <img class="project-image" src="images/{{.thumbnail}}">
+                    <h3>{{ .name}}</h3>
+                    <p class="timeline-entry-date" style="font-weight:600; color:#c0c0c0">Web Application</p>
+                    <hr style="color: #fdfbfb">
+                    <p class="project-description"> {{ .description}} </p>
+                    <!-- <ul class="project-technologies">
+                        {{range .technologies}}
+                            <li>{{ . }}</li>
+                        {{end }}
+                    </ul> -->
+                <button class="fill-button grow" style="margin-right:0.5em;" onclick="location.href={{ .learn_more }}">Learn More</button> 
+                    <!-- <button class="other-button grow">View Code</button> -->
+                </div>
+            {{end}}
+        </div>
+
+    </section>
+</div>

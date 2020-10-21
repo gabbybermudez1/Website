@@ -1,0 +1,20 @@
+{
+    "2sign":{
+        "name": "2Sign",
+        "thumbnail": "2sign-scaled.png",
+        "description": "2Sign is a cross-platform app that allows youz to create voice-driven contracts. Won 1st place in Global Legal Hackathon 2018",
+        "learn_more": "https://www.obj.ca/article/techopia-lawyers-developers-team-ottawa-legal-hackathon"
+    },
+    "source_code_similarity_detection":{
+        "name": "Source Code Similarity Detector",
+        "thumbnail": "code-scaled.png",
+        "description": "Project made as a capstone project. Implemented the Winnowing Algorithm and Extended Winnowing Algorithm.",
+        "learn_more": "https://drive.google.com/file/d/1h9e3G6Ei8FZRv806ecZTcs8y-FUYC7bR/view?usp=sharing"
+    },
+    "meridio":{
+        "name": "Meridio Rideshares",
+        "thumbnail": "meridio-scaled.png",
+        "description": "Meridio is a cross-platform app made with react-native.",
+        "learn_more":"https://github.com/ChrisGivelas/RideYeet"
+    }
+}

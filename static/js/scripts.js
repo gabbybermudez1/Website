@@ -31,8 +31,9 @@ const type_effect = () => {
     }
 }
 
-/**
+/**===========================================================
  * Jumbotron-Related Styling
+ * ===========================================================
  */
 cursor = document.querySelector("#cmd-cursor");
 setInterval(blink, 700);
@@ -76,7 +77,6 @@ for(var i=0; i < all_links.length; i++){
 }
 
 
-
 var resume_button = document.querySelector("#jumbotron button");
 resume_button.onclick = function(){
     location.href="resume/GabbyBermudez_Resume.pdf";
@@ -107,5 +107,38 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
         }
     })
 }    
+
+/**===========================================================
+ *  Projects Section Related Scripts
+ * ===========================================================
+ */
+var modals_map = new Map()
+var projects = document.querySelectorAll('.gallery-item');
+
+// might need some refactors
+var modal_content;
+var sibling_content;
+var project_id;
+var current_modal;
+
+const create_modal = function(modal_content){
+    // instanciate new modal
+    var modal = new tingle.modal({
+    });
+    modal.setContent(modal_content);
+    return modal;
+}
+
+for(var i=0; i < projects.length; i++){
+    sibling_content = projects[i].nextElementSibling.innerHTML;
+    project_id = projects[i].getAttribute('id');
+    current_modal  = create_modal(sibling_content);
+    modals_map.set(project_id, current_modal)
+    projects[i].addEventListener("click", function(){
+        modals_map.get(this.getAttribute('id')).open();
+    });
+}
+
+
 
 
