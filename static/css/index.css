@@ -481,16 +481,22 @@ section{
 .grow:hover { transform: scale(1.15); }
 
 .project-gallery{
-    /* allows us to get each image in a row that wraps around */
     display:flex;
     flex-wrap:wrap;
     justify-content: flex-start;
+    margin-left:-1em;
 }
 
+
 .project-gallery .gallery-item{
-    width: 100%;
-    margin: 1em 0;
+    margin: 0.5em;
+    padding:0.5em;
 }
+
+/* .project-gallery .gallery-item:first-of-type{
+    margin-left: 0em;
+    padding-left:0em;
+} */
 
 .project-gallery .gallery-item .gallery-image{
     position:relative;
@@ -522,19 +528,11 @@ section{
     flex-wrap:wrap;
 }
 
-.project-technologies li{
-    border: 2px solid #4772d1;
-    margin: 0.5em;
-    border-radius: 7px;
-    padding: 0.2em;
-}
-
 .other-button{
     border: 2px solid #F94B71;
     background-color: #fff;
     color:#F94B71;
     padding: 10px 20px;
-    transition: all 0.25s linear;
     margin: 1.5em 0;
     font-weight:600;
 }
@@ -544,27 +542,21 @@ section{
     border: 1px solid #F94B71;
     color:#fff;
     padding: 10px 20px;
-    transition: all 0.25s linear;
     margin: 1.5em 0;
     font-weight:600;
 }
 
 
-
-@media(min-width: 700px){
-    .project-gallery .gallery-item{
-        width: 50%;
-    }
-
+@media(min-width: 800px){
     .project-gallery .gallery-item .gallery-image{
-        width: 280px;
-        height:280px;
-    }
-    
+        width: 320px;
+        height:320px;
+    } 
 }
 
 @media(min-width: 1000px){
-    .project-gallery .gallery-item{
-        width: 33%;
-    }
+    .project-gallery .gallery-item .gallery-image{
+        width: 350px;
+        height:350px;
+    } 
 }
