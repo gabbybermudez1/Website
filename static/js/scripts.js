@@ -112,33 +112,33 @@ for(var i = 0; i < all_experience_buttons.length ; i++){
  *  Projects Section Related Scripts
  * ===========================================================
  */
-// instanciate new modal
-var modal = new tingle.modal({
-    footer: true,
-    stickyFooter: false,
-    closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
-    cssClass: ['custom-class-1', 'custom-class-2'],
-    onOpen: function() {
-        console.log('modal open');
-    },
-    onClose: function() {
-        console.log('modal closed');
-    },
-});
+var modals_map = new Map()
+var projects = document.querySelectorAll('.gallery-item');
 
-// set content
-modal.setContent('<h1>Project Content Coming Soon</h1>');
+// might need some refactors
+var modal_content;
+var sibling_content;
+var project_id;
+var current_modal;
 
-// add a button
-modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
-    // here goes some logic
-    modal.close();
-});
+const create_modal = function(modal_content){
+    // instanciate new modal
+    var modal = new tingle.modal({
+    });
+    modal.setContent(modal_content);
+    return modal;
+}
 
-// add another button
-modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function() {
-    // here goes some logic
-    modal.close();
-});
+for(var i=0; i < projects.length; i++){
+    sibling_content = projects[i].nextElementSibling.innerHTML;
+    project_id = projects[i].getAttribute('id');
+    current_modal  = create_modal(sibling_content);
+    modals_map.set(project_id, current_modal)
+    projects[i].addEventListener("click", function(){
+        modals_map.get(this.getAttribute('id')).open();
+    });
+}
+
+
+
 

@@ -471,9 +471,9 @@ section{
 /* ================================================== */
 #projects-wrapper{
     /* can alternatively do: #FFFBF5 2nd best one*/
-    /* background-color:#F9F6F1; => best one */
+    background-color:#F9F6F1; /* Best one*/
     /* background-color:#F5F5F5; grey => derived from findmatthew.com*/
-    background-color: #f5efdf; 
+    /* background-color: #f5efdf; from wordpress Twenty Twenty Theme */
     padding: 1rem;
 }
 
@@ -502,11 +502,65 @@ section{
     background-repeat: no-repeat;
 }
 
+.project-image{
+    display:block;
+    width:50%;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+
+.project-description, .project-title{
+    margin: 0.6em 0;
+}
+
+.project-description{
+    color: #333;
+}
+
+.project-technologies{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.project-technologies li{
+    border: 2px solid #4772d1;
+    margin: 0.5em;
+    border-radius: 7px;
+    padding: 0.2em;
+}
+
+.other-button{
+    border: 2px solid #F94B71;
+    background-color: #fff;
+    color:#F94B71;
+    padding: 10px 20px;
+    transition: all 0.25s linear;
+    margin: 1.5em 0;
+    font-weight:600;
+}
+
+.fill-button{
+    background-color: #F94B71;
+    border: 1px solid #F94B71;
+    color:#fff;
+    padding: 10px 20px;
+    transition: all 0.25s linear;
+    margin: 1.5em 0;
+    font-weight:600;
+}
+
+
 
 @media(min-width: 700px){
     .project-gallery .gallery-item{
         width: 50%;
     }
+
+    .project-gallery .gallery-item .gallery-image{
+        width: 280px;
+        height:280px;
+    }
+    
 }
 
 @media(min-width: 1000px){

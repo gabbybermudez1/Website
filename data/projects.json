@@ -1,14 +1,20 @@
 {
     "2sign":{
         "name": "2Sign",
-        "thumbnail": "2sign-scaled.png"
+        "thumbnail": "2sign-scaled.png",
+        "description": "2Sign is a cross-platform app that allows you to create voice-driven contracts. Won 1st place in Global Legal Hackathon 2018",
+        "technologies": ["React", "React-Native", "JavaScript"]
     },
     "source_code_similarity_detection":{
         "name": "Source Code Similarity Detector",
-        "thumbnail": "code-scaled.png"
+        "thumbnail": "code-scaled.png",
+        "description": "Project made as a capstone project. Implemented the Winnowing Algorithm and Extended Winnowing Algorithm.",
+        "technologies": ["Python", "Algorithm Design"]
     },
     "meridio":{
         "name": "Meridio Rideshares",
-        "thumbnail": "meridio-scaled.png"
+        "thumbnail": "meridio-scaled.png",
+        "description": "Meridio is a cross-platform app made with react-native.",
+        "technologies": ["React-Native", "Node JS"]
     }
 }
